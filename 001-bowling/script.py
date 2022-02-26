@@ -40,6 +40,7 @@ def _get_frame_score(frame, frame_idx):
             next_frame = _get_frames()[frame_idx + 1]
             return 10 + (10 if next_frame == 'X' else int(next_frame[0]))
         else:
+            # non cleared regular frame, just sum up
             return sum([int(num) for num in frame])
 
 
